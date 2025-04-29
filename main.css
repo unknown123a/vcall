@@ -1,0 +1,67 @@
+#videos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.video-player {
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.control-container {
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.control-container:hover {
+    background-color: #0056b3;
+}
+
+.control-container img {
+    width: 30px;
+    height: 30px;
+}
+
+#leave-btn {
+    background-color: #dc3545; 
+}
+
+#leave-btn:hover {
+    background-color: #c82333;
+}
+
+#share-btn {
+    background-color: #28a745; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#share-btn:hover {
+    background-color: #218838;
+}
+
+a {
+    text-decoration: none;
+}
