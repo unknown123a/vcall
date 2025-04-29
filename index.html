@@ -5,42 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>PeerChat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="main.css">
+
+    
 </head>
+
 <body>
 
-    <div id="videos" class="container">
+    <div id="videos" class="container-fluid">
         <video class="video-player" id="user-1" autoplay playsinline></video>
         <video class="video-player" id="user-2" autoplay playsinline></video>
     </div>
 
-    <div id="controls" class="container">
-        <div class="control-container" id="camera-btn">
+    <div id="controls" class="container-fluid">
+        <div class="control-container" id="camera-btn" title="Toggle Camera">
             <img src="icons/camera.png" alt="Camera"/>
         </div>
 
-        <div class="control-container" id="mic-btn">
+        <div class="control-container" id="mic-btn" title="Toggle Microphone">
             <img src="icons/mic.png" alt="Microphone"/>
         </div>
 
-        <a href="lobby.html">
-            <div class="control-container" id="leave-btn">
+        <a href="lobby.html" class="text-decoration-none">
+            <div class="control-container" id="leave-btn" title="Leave Call">
                 <img src="icons/phone.png" alt="Leave"/>
             </div>
         </a>
     </div>
 
-    <div id="share-btn">
+    <div id="share-btn" title="Share Meeting Link">
         <i class="bi bi-share"></i> 
     </div>
 
+    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     
+    <!-- Agora SDK + Main Script -->
     <script src="agora-rtm-sdk-1.4.4.js"></script>
     <script src="main.js"></script>
-
 
 </body>
 </html>

@@ -1,67 +1,100 @@
-#videos {
+body {
+    background-color: #f0f2f5;
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 20px;
+    flex-direction: column;
+    overflow: hidden;
 }
-
+@media (max-width: 400px) {
 .video-player {
-    width: 100%;
-    max-width: 600px; 
-    height: auto;
-    border: 2px solid #ddd;
-    border-radius: 10px;
+max-width: 100%;
+}
 }
 
+#videos {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 1rem;
+    overflow-y: auto;
+}
+.video-player {
+    background: #000;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 16/9;
+    border-radius: 1rem;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
 #controls {
+    background: #fff;
+    border-top: 1px solid #dee2e6;
+    padding: 0.75rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 1.5rem;
 }
-
 .control-container {
-    background-color: #007bff;
-    padding: 10px;
+    background: #6f42c1;
+    padding: 0.75rem;
     border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, transform 0.2s;
 }
-
 .control-container:hover {
-    background-color: #0056b3;
+    background-color: #5a379d;
+    transform: scale(1.1);
 }
-
 .control-container img {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
 }
-
-#leave-btn {
-    background-color: #dc3545; 
-}
-
-#leave-btn:hover {
-    background-color: #c82333;
-}
-
 #share-btn {
-    background-color: #28a745; 
     position: fixed;
-    bottom: 20px;
+    bottom: 100px;
     right: 20px;
-    padding: 15px;
-    border-radius: 50%;
+    background: #0d6efd;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, transform 0.2s;
 }
-
 #share-btn:hover {
-    background-color: #218838;
+    background: #0b5ed7;
+    transform: scale(1.05);
 }
-
-a {
-    text-decoration: none;
+@media (max-width: 576px) {
+    #controls {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    .control-container {
+        width: 50px;
+        height: 50px;
+        padding: 0.5rem;
+    }
+    .control-container img {
+        width: 24px;
+        height: 24px;
+    }
+    #share-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 1.25rem;
+    }
 }
