@@ -1,0 +1,13 @@
+{
+    "rewrites": [
+      {
+        "source": "/home",
+        "destination": "/vcall.html"
+      },
+      {
+        "source": "/lobby",
+        "destination": "/index.html"
+      }
+    ]
+  }
+  
